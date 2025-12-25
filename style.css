@@ -28,7 +28,9 @@ body{
 a{ color:inherit; text-decoration:none; }
 .container{ max-width:var(--max); margin:0 auto; padding:28px 18px 70px; }
 
-/* Top progress bar */
+/* =========================
+   TOP PROGRESS BAR
+========================= */
 .scrollbar{
   position:fixed; top:0; left:0;
   height:3px; width:0%;
@@ -36,7 +38,9 @@ a{ color:inherit; text-decoration:none; }
   z-index:9999;
 }
 
-/* NAV */
+/* =========================
+   NAV
+========================= */
 .nav{
   position:sticky; top:0; z-index:100;
   background: rgba(11,18,32,.72);
@@ -132,7 +136,9 @@ a{ color:inherit; text-decoration:none; }
   .nav-mobile.open{ display:block; }
 }
 
-/* CARDS + SECTIONS */
+/* =========================
+   CARDS + SECTIONS
+========================= */
 .card{
   position:relative;
   background: var(--card);
@@ -185,7 +191,9 @@ p{ margin:0; }
   font-weight:600;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .hero{
   display:grid;
   grid-template-columns: 1.6fr .95fr;
@@ -225,64 +233,39 @@ p{ margin:0; }
   background: linear-gradient(135deg, var(--accent1), var(--accent2));
 }
 .btn.primary:hover{ opacity:.92; }
-.btn.ghost{
-  background: transparent;
-}
+.btn.ghost{ background: transparent; }
 
-/* Old chip social (kept in case you use it elsewhere) */
-.social{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-top:14px;
-}
-.chip{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:9px 12px;
-  border-radius:999px;
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.03);
-  color: var(--muted);
-  font-weight:800;
-  transition: transform .18s ease, background .18s ease, color .18s ease;
-}
-.chip:hover{
-  background: rgba(255,255,255,.07);
-  color: var(--text);
-  transform: translateY(-1px);
-}
-.chip-btn{ cursor:pointer; }
-
-/* ✅ NEW: Social Icons (Hero) */
+/* =========================
+   SOCIAL ICONS (NEW)
+========================= */
 .social-icons{
   display:flex;
-  flex-wrap:wrap;
   gap:10px;
   margin-top:14px;
+  align-items:center;
 }
 .icon-btn{
-  width:46px;
-  height:46px;
-  border-radius:999px;
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.03);
-  display:inline-flex;
+  width:40px;
+  height:40px;
+  border-radius:10px;
+  display:flex;
   align-items:center;
   justify-content:center;
-  color: var(--muted);
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.05);
+  color: var(--text);
   cursor:pointer;
-  transition: transform .18s ease, background .18s ease, color .18s ease, box-shadow .18s ease;
+  padding:0;
+  transition: transform .18s ease, background .18s ease, box-shadow .18s ease, opacity .18s ease;
 }
 .icon-btn:hover{
-  background: linear-gradient(135deg, var(--accent1), var(--accent2));
-  color: var(--text);
   transform: translateY(-2px);
+  background: linear-gradient(135deg, var(--accent1), var(--accent2));
   box-shadow: 0 12px 26px rgba(124,58,237,.35);
 }
 .icon-btn i{
-  font-size:18px;
+  font-size:16px;
+  line-height:1;
   pointer-events:none;
 }
 
@@ -299,14 +282,12 @@ p{ margin:0; }
 .link{ color: var(--text); font-weight:800; }
 .link:hover{ text-decoration: underline; text-underline-offset: 4px; }
 
-.divider{
-  height:1px;
-  background: var(--line);
-  margin:12px 0;
-}
+.divider{ height:1px; background: var(--line); margin:12px 0; }
 .mini{ color: var(--muted); font-size: 13px; line-height: 1.6; }
 
-/* Card glow */
+/* =========================
+   CARD GLOW
+========================= */
 .card-glow{
   position:absolute;
   inset:-1px;
@@ -320,16 +301,18 @@ p{ margin:0; }
   padding: 1px;
 }
 
-/* Floating animation */
-.floaty{
-  animation: floaty 5.5s ease-in-out infinite;
-}
+/* =========================
+   FLOATING ANIMATION
+========================= */
+.floaty{ animation: floaty 5.5s ease-in-out infinite; }
 @keyframes floaty{
   0%,100%{ transform: translateY(0px); }
   50%{ transform: translateY(-7px); }
 }
 
-/* Stats */
+/* =========================
+   STATS
+========================= */
 .stats{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
@@ -348,13 +331,11 @@ p{ margin:0; }
   background-clip:text;
   color: transparent;
 }
-.stat-label{
-  margin-top:6px;
-  color: var(--muted);
-  line-height:1.5;
-}
+.stat-label{ margin-top:6px; color: var(--muted); line-height:1.5; }
 
-/* Skills */
+/* =========================
+   SKILLS
+========================= */
 .skill-grid{
   display:grid;
   grid-template-columns: repeat(2, 1fr);
@@ -385,7 +366,9 @@ p{ margin:0; }
   color: var(--text);
 }
 
-/* Timeline / Experience */
+/* =========================
+   EXPERIENCE / TIMELINE
+========================= */
 .timeline{
   display:flex;
   flex-direction:column;
@@ -396,10 +379,8 @@ p{ margin:0; }
   border-top:1px solid var(--line);
   padding-top:14px;
 }
-.entry:first-child{
-  border-top:0;
-  padding-top:0;
-}
+.entry:first-child{ border-top:0; padding-top:0; }
+
 .entry-top{
   display:flex;
   justify-content:space-between;
@@ -407,6 +388,7 @@ p{ margin:0; }
   flex-wrap:wrap;
   margin-bottom:8px;
 }
+
 ul{ margin:10px 0 0; padding-left:18px; }
 li{ margin:7px 0; line-height:1.6; color: var(--text); opacity:.95; }
 
@@ -426,7 +408,9 @@ li{ margin:7px 0; line-height:1.6; color: var(--text); opacity:.95; }
   color: var(--text);
 }
 
-/* Projects */
+/* =========================
+   PROJECTS
+========================= */
 .grid{
   display:grid;
   grid-template-columns: repeat(2, 1fr);
@@ -435,9 +419,7 @@ li{ margin:7px 0; line-height:1.6; color: var(--text); opacity:.95; }
 }
 @media(max-width: 980px){ .grid{ grid-template-columns: 1fr; } }
 
-.hoverlift{
-  transition: transform .2s ease, background .2s ease;
-}
+.hoverlift{ transition: transform .2s ease, background .2s ease; }
 .hoverlift:hover{
   transform: translateY(-3px);
   background: rgba(255,255,255,.05);
@@ -450,7 +432,9 @@ li{ margin:7px 0; line-height:1.6; color: var(--text); opacity:.95; }
   margin-top:12px;
 }
 
-/* Education */
+/* =========================
+   EDUCATION
+========================= */
 .edu{
   display:flex;
   flex-direction:column;
@@ -463,7 +447,9 @@ li{ margin:7px 0; line-height:1.6; color: var(--text); opacity:.95; }
   background: rgba(255,255,255,.03);
 }
 
-/* Certifications */
+/* =========================
+   CERTIFICATIONS
+========================= */
 .list-grid{
   display:grid;
   grid-template-columns: repeat(2, 1fr);
@@ -481,7 +467,9 @@ li{ margin:7px 0; line-height:1.6; color: var(--text); opacity:.95; }
   font-weight:800;
 }
 
-/* Publications */
+/* =========================
+   PUBLICATIONS
+========================= */
 .pub{
   display:flex;
   flex-direction:column;
@@ -495,7 +483,9 @@ li{ margin:7px 0; line-height:1.6; color: var(--text); opacity:.95; }
   background: rgba(255,255,255,.03);
 }
 
-/* Contact */
+/* =========================
+   CONTACT
+========================= */
 .contact{
   margin-top:10px;
   display:grid;
@@ -512,7 +502,9 @@ li{ margin:7px 0; line-height:1.6; color: var(--text); opacity:.95; }
 }
 .bottom-cta{ margin-top:14px; }
 
-/* Footer */
+/* =========================
+   FOOTER
+========================= */
 .footer{
   margin-top:22px;
   text-align:center;
@@ -520,7 +512,9 @@ li{ margin:7px 0; line-height:1.6; color: var(--text); opacity:.95; }
   font-size: 13px;
 }
 
-/* Reveal animations */
+/* =========================
+   REVEAL ANIMATION
+========================= */
 .reveal{
   opacity: 0;
   transform: translateY(14px);
@@ -531,11 +525,12 @@ li{ margin:7px 0; line-height:1.6; color: var(--text); opacity:.95; }
   transform: translateY(0);
 }
 
-/* Reduce motion (accessibility) */
+/* =========================
+   REDUCE MOTION
+========================= */
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior: auto; }
   .floaty{ animation: none; }
   .reveal{ transition: none; }
-  .btn, .chip, .nav-links a, .hoverlift{ transition: none; }
+  .btn, .nav-links a, .hoverlift{ transition: none; }
 }
-
