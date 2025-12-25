@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bhuvan Sri Sai Damarla — Portfolio</title>
   <meta name="description" content="Bhuvan Sri Sai Damarla portfolio — Data Analyst / Data Scientist / Python Developer" />
+
   <link rel="stylesheet" href="style.css" />
+
+  <!-- ✅ Icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
@@ -74,11 +78,18 @@
           <a class="btn ghost" href="#projects">View Projects</a>
         </div>
 
-        <div class="social">
-          <a class="chip" href="https://github.com/Bdamarla26" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="chip" href="https://www.linkedin.com/in/bdamarla" target="_blank" rel="noreferrer">LinkedIn</a>
-          <button class="chip chip-btn" id="copyEmailBtn" type="button" data-copy="bdamarla.26@gmail.com">
-            Copy Email
+        <!-- ✅ SOCIAL ICONS (replaces your old .social text buttons) -->
+        <div class="social-icons">
+          <a class="icon-btn" href="https://github.com/Bdamarla26" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a class="icon-btn" href="https://www.linkedin.com/in/bdamarla" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <button class="icon-btn" id="copyEmailBtn" type="button" data-copy="bdamarla.26@gmail.com" aria-label="Copy Email">
+            <i class="fa-solid fa-envelope"></i>
           </button>
         </div>
       </div>
@@ -448,16 +459,15 @@
       });
     });
 
-    // copy email
+    // copy email (✅ works with icon button too)
     const copyBtn = document.getElementById("copyEmailBtn");
     copyBtn.addEventListener("click", async () => {
       try {
         await navigator.clipboard.writeText(copyBtn.dataset.copy);
-        const old = copyBtn.textContent;
-        copyBtn.textContent = "Copied!";
-        setTimeout(() => (copyBtn.textContent = old), 900);
+        const oldHTML = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
+        setTimeout(() => (copyBtn.innerHTML = oldHTML), 900);
       } catch (e) {
-        // fallback
         window.location.href = "mailto:" + copyBtn.dataset.copy;
       }
     });
