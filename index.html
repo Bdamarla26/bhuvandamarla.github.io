@@ -1,89 +1,62 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- =========================
-       META / SEO
-  ========================== -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bhuvan Sri Sai Damarla — Portfolio</title>
   <meta name="description" content="Bhuvan Sri Sai Damarla portfolio — Data Analyst / Data Scientist / Python Developer" />
   <link rel="stylesheet" href="style.css" />
-
-  <!-- =========================
-       ICONS (Font Awesome)
-       (Used for GitHub / LinkedIn / Email logos)
-  ========================== -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 
 <body>
-  <!-- =========================
-       TOP PROGRESS BAR
-  ========================== -->
+  <!-- Top Progress Bar -->
   <div class="scrollbar" id="scrollbar"></div>
 
-  <!-- =========================
-       NAVBAR
-  ========================== -->
+  <!-- NAV -->
   <header class="nav">
     <div class="nav-inner">
-      <!-- Brand -->
       <a class="brand" href="#home" aria-label="Go to Home">
         <span class="brand-dot"></span>
-        <span class="brand-name">BHUWAN SRI SAI DAMARLA</span>
+        <span class="brand-name">Bhuvan Sri Sai Damarla</span>
       </a>
 
-      <!-- Desktop nav links -->
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#home">HOME</a>
-        <a href="#skills">SKILLS</a>
-        <a href="#experience">EXPERIENCE</a>
-        <a href="#projects">PROJECTS</a>
-        <a href="#education">EDUCATION</a>
-        <a href="#certifications">CERTIFICATIONS</a>
-        <a href="#publications">PUBLICATIONS</a>
-        <a href="#contact">CONTACT</a>
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
       </nav>
 
-      <!-- Mobile menu button -->
       <button class="nav-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
     </div>
 
-    <!-- =========================
-         MOBILE MENU
-    ========================== -->
+    <!-- Mobile menu -->
     <div class="nav-mobile" id="mobileMenu" aria-label="Mobile navigation">
-      <a href="#home">HOME</a>
-      <a href="#skills">SKILLS</a>
-      <a href="#experience">EXPERIENCE</a>
-      <a href="#projects">PROJECTS</a>
-      <a href="#education">EDUCATION</a>
-      <a href="#certifications">CERTIFICATIONS</a>
-      <a href="#publications">PUBLICATIONS</a>
-      <a href="#contact">CONTACT</a>
+      <a href="#home">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
     </div>
   </header>
 
-  <!-- =========================
-       MAIN CONTAINER
-  ========================== -->
   <main class="container" id="home">
-
-    <!-- =========================
-         HERO SECTION
-    ========================== -->
+    <!-- HERO -->
     <section class="hero reveal">
-      <!-- Left content -->
       <div class="hero-left">
         <p class="kicker">Portfolio</p>
-
         <h1>
           Hi, I’m <span class="accent">Bhuvan Sri Sai Damarla</span>.
         </h1>
-
         <p class="subtitle">
           Master’s (Data Analytics Engineering) • Data Analyst • Data Scientist • Python Developer
         </p>
@@ -95,100 +68,58 @@
           <b>35%</b> and improved workflow efficiency by <b>70%</b> through Python automation and ML integration.
         </p>
 
-        <!-- Buttons -->
         <div class="cta">
           <a class="btn primary" href="#contact">Contact</a>
           <a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">Resume</a>
           <a class="btn ghost" href="#projects">View Projects</a>
         </div>
 
-        <!-- =========================
-             SOCIAL ICONS (BIG + CLEAN)
-        ========================== -->
-        <div class="social-icons" aria-label="Social links">
-          <a class="icon-btn" href="https://github.com/Bdamarla26" target="_blank" rel="noreferrer" aria-label="Open GitHub">
-            <i class="fa-brands fa-github"></i>
-          </a>
-
-          <a class="icon-btn" href="https://www.linkedin.com/in/bdamarla" target="_blank" rel="noreferrer" aria-label="Open LinkedIn">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-
-          <button class="icon-btn email" id="copyEmailBtn" type="button" data-copy="bdamarla.26@gmail.com" aria-label="Copy Email">
-            <i class="fa-solid fa-envelope"></i>
+        <div class="social">
+          <a class="chip" href="https://github.com/Bdamarla26" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="chip" href="https://www.linkedin.com/in/bdamarla" target="_blank" rel="noreferrer">LinkedIn</a>
+          <button class="chip chip-btn" id="copyEmailBtn" type="button" data-copy="bdamarla.26@gmail.com">
+            Copy Email
           </button>
-
-          <span class="social-hint muted" id="emailHint">Click ✉ to copy email</span>
         </div>
       </div>
 
-      <!-- =========================
-           QUICK INFO CARD (REDESIGNED)
-      ========================== -->
       <aside class="hero-card card floaty">
         <div class="card-glow"></div>
+        <h2>Quick Info</h2>
 
-        <div class="qhead">
-          <h2>Quick Info</h2>
-          <span class="qbadge">Open to Work</span>
+        <div class="kv">
+          <div class="k">Email</div>
+          <div class="v"><a class="link" href="mailto:bdamarla.26@gmail.com">bdamarla.26@gmail.com</a></div>
         </div>
 
-        <div class="qgrid">
-          <div class="qitem">
-            <div class="qicon"><i class="fa-solid fa-envelope"></i></div>
-            <div class="qtext">
-              <div class="qlabel">Email</div>
-              <a class="qvalue" href="mailto:bdamarla.26@gmail.com">bdamarla.26@gmail.com</a>
-            </div>
-          </div>
+        <div class="kv">
+          <div class="k">Phone</div>
+          <div class="v"><a class="link" href="tel:+15712621333">+1 (571) 262-1333</a></div>
+        </div>
 
-          <div class="qitem">
-            <div class="qicon"><i class="fa-solid fa-phone"></i></div>
-            <div class="qtext">
-              <div class="qlabel">Phone</div>
-              <a class="qvalue" href="tel:+15712621333">+1 (571) 262-1333</a>
-            </div>
-          </div>
+        <div class="kv">
+          <div class="k">Location</div>
+          <div class="v">Fairfax, VA (USA)</div>
+        </div>
 
-          <div class="qitem">
-            <div class="qicon"><i class="fa-solid fa-location-dot"></i></div>
-            <div class="qtext">
-              <div class="qlabel">Location</div>
-              <div class="qvalue">Fairfax, VA (USA)</div>
-            </div>
-          </div>
+        <div class="kv">
+          <div class="k">Looking for</div>
+          <div class="v">Internship / Part-time / Full-time</div>
+        </div>
 
-          <div class="qitem">
-            <div class="qicon"><i class="fa-solid fa-briefcase"></i></div>
-            <div class="qtext">
-              <div class="qlabel">Looking For</div>
-              <div class="qvalue">Internship • Part-time • Full-time</div>
-            </div>
-          </div>
-
-          <div class="qitem">
-            <div class="qicon"><i class="fa-solid fa-bullseye"></i></div>
-            <div class="qtext">
-              <div class="qlabel">Focus</div>
-              <div class="qvalue">Data • ML • Automation • Dashboards</div>
-            </div>
-          </div>
+        <div class="kv">
+          <div class="k">Focus</div>
+          <div class="v">Data • ML • Automation • Dashboards</div>
         </div>
 
         <div class="divider"></div>
-
-        <div class="qtip">
-          <div class="qtip-title">Tip</div>
-          <p class="mini">
-            Keep your best 3–4 projects here, add metrics (accuracy, RMSE, time saved, etc.), and links.
-          </p>
-        </div>
+        <p class="mini">
+          Tip: Keep your best 3–4 projects here, add metrics (accuracy, RMSE, time saved, etc.), and links.
+        </p>
       </aside>
     </section>
 
-    <!-- =========================
-         STATS SECTION
-    ========================== -->
+    <!-- STATS -->
     <section class="stats reveal">
       <div class="stat card">
         <div class="stat-num">70%</div>
@@ -204,9 +135,7 @@
       </div>
     </section>
 
-    <!-- =========================
-         SKILLS SECTION
-    ========================== -->
+    <!-- SKILLS -->
     <section class="section card reveal" id="skills">
       <div class="section-head">
         <h2>Skills</h2>
@@ -267,9 +196,7 @@
       </div>
     </section>
 
-    <!-- =========================
-         EXPERIENCE SECTION
-    ========================== -->
+    <!-- EXPERIENCE -->
     <section class="section card reveal" id="experience">
       <div class="section-head">
         <h2>Experience</h2>
@@ -334,9 +261,7 @@
       </div>
     </section>
 
-    <!-- =========================
-         PROJECTS SECTION
-    ========================== -->
+    <!-- PROJECTS -->
     <section class="section card reveal" id="projects">
       <div class="section-head">
         <h2>Projects</h2>
@@ -394,9 +319,7 @@
       </div>
     </section>
 
-    <!-- =========================
-         EDUCATION SECTION
-    ========================== -->
+    <!-- EDUCATION -->
     <section class="section card reveal" id="education">
       <div class="section-head">
         <h2>Education</h2>
@@ -422,9 +345,7 @@
       </div>
     </section>
 
-    <!-- =========================
-         CERTIFICATIONS SECTION
-    ========================== -->
+    <!-- CERTIFICATIONS -->
     <section class="section card reveal" id="certifications">
       <div class="section-head">
         <h2>Certifications</h2>
@@ -440,9 +361,7 @@
       </div>
     </section>
 
-    <!-- =========================
-         PUBLICATIONS SECTION
-    ========================== -->
+    <!-- PUBLICATIONS -->
     <section class="section card reveal" id="publications">
       <div class="section-head">
         <h2>Publications</h2>
@@ -470,9 +389,7 @@
       </div>
     </section>
 
-    <!-- =========================
-         CONTACT SECTION
-    ========================== -->
+    <!-- CONTACT -->
     <section class="section card reveal" id="contact">
       <div class="section-head">
         <h2>Contact</h2>
@@ -504,22 +421,11 @@
       </div>
     </section>
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
     <footer class="footer reveal">
       © <span id="year"></span> Bhuvan Sri Sai Damarla • Built with HTML/CSS
     </footer>
   </main>
 
-  <!-- =========================
-       TOAST (Copy Email)
-  ========================== -->
-  <div class="toast" id="toast">Email copied!</div>
-
-  <!-- =========================
-       JAVASCRIPT
-  ========================== -->
   <script>
     // year
     document.getElementById("year").textContent = new Date().getFullYear();
@@ -542,23 +448,17 @@
       });
     });
 
-    // toast
-    const toast = document.getElementById("toast");
-    const showToast = (msg) => {
-      toast.textContent = msg;
-      toast.classList.add("show");
-      setTimeout(() => toast.classList.remove("show"), 1200);
-    };
-
     // copy email
     const copyBtn = document.getElementById("copyEmailBtn");
     copyBtn.addEventListener("click", async () => {
-      const email = copyBtn.dataset.copy;
       try {
-        await navigator.clipboard.writeText(email);
-        showToast("Email copied!");
+        await navigator.clipboard.writeText(copyBtn.dataset.copy);
+        const old = copyBtn.textContent;
+        copyBtn.textContent = "Copied!";
+        setTimeout(() => (copyBtn.textContent = old), 900);
       } catch (e) {
-        window.location.href = "mailto:" + email;
+        // fallback
+        window.location.href = "mailto:" + copyBtn.dataset.copy;
       }
     });
 
