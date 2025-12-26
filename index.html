@@ -716,3 +716,50 @@
 
 </body>
 </html>
+
+<script>
+  /* =========================================================
+     PROJECTS CAROUSEL CONTROLS
+  ========================================================= */
+  const track = document.getElementById("projectsTrack");
+  const prevBtn = document.getElementById("projPrev");
+  const nextBtn = document.getElementById("projNext");
+
+  let projIndex = 0;
+
+  function getCardWidth(){
+    const firstCard = track.querySelector(".p-card");
+    if(!firstCard) return 0;
+    const gap = 18; // must match .projects-track gap
+    return firstCard.getBoundingClientRect().width + gap;
+  }
+
+  function updateProjects(){
+    const cardW = getCardWidth();
+    track.style.transform = `translateX(${-projIndex * cardW}px)`;
+  }
+
+  function maxIndex(){
+    const cardW = getCardWidth();
+    const viewport = track.parentElement.getBoundingClientRect().width;
+    const total = track.scrollWidth;
+    const maxTranslate = Math.max(0, total - viewport);
+    return cardW ? Math.ceil(maxTranslate / cardW) : 0;
+  }
+
+  nextBtn?.addEventListener("click", () => {
+    projIndex = Math.min(projIndex + 1, maxIndex());
+    updateProjects();
+  });
+
+  prevBtn?.addEventListener("click", () => {
+    projIndex = Math.max(projIndex - 1, 0);
+    updateProjects();
+  });
+
+  window.addEventListener("resize", () => {
+    projIndex = Math.min(projIndex, maxIndex());
+    updateProjects();
+  });
+</script>
+
