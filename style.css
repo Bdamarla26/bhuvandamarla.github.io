@@ -510,49 +510,47 @@ li{ margin:7px 0; line-height:1.6; color: var(--text); opacity:.95; }
   .btn, .chip, .nav-links a, .hoverlift{ transition: none; }
 }
 
-/* Social icon row */
-.social-icons{
+/* Round icon row */
+.social-round{
   display:flex;
-  gap:14px;
-  flex-wrap:wrap;
+  gap:16px;
   align-items:center;
   margin-top:14px;
 }
 
-/* Icon-only buttons that match your design */
-.sicon{
-  width:56px;
-  height:56px;
-  border-radius:16px;
-  display:inline-grid;
-  place-items:center;
+/* White circle icons */
+.round-icon{
+  width:54px;
+  height:54px;
+  border-radius:999px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
 
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.03);
-  color: var(--muted);
+  background:#ffffff;
+  border:1px solid rgba(255,255,255,.35);
+  box-shadow: 0 14px 40px rgba(0,0,0,.22);
 
-  cursor:pointer;
-  transition: transform .18s ease, background .18s ease, color .18s ease, box-shadow .18s ease;
-  appearance:none;
-  -webkit-appearance:none;
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
 }
 
-.sicon:hover{
-  background: rgba(255,255,255,.08);
-  color: var(--text);
-  transform: translateY(-1px);
-  box-shadow: 0 12px 30px rgba(0,0,0,.25);
-}
-
-/* Force SVG color (fixes black icons) */
-.sicon-svg{
+/* Icon color inside (matches your theme) */
+.round-icon svg{
   width:24px;
   height:24px;
-  fill: currentColor !important;
+  fill: var(--accent2); /* blue */
 }
 
-/* Remove default button styles fully */
-button.sicon{
-  padding:0;
-  font: inherit;
+/* Hover effect */
+.round-icon:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 55px rgba(0,0,0,.28);
+  filter: brightness(1.02);
 }
+
+/* Optional: different colors per icon (nice touch) */
+.round-icon[aria-label="GitHub"] svg{ fill: var(--accent1); }
+.round-icon[aria-label="LinkedIn"] svg{ fill: var(--accent2); }
+.round-icon[aria-label="Email"] svg{ fill: var(--accent3); }
+
+ 
