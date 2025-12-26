@@ -1,146 +1,219 @@
+/* =========================================================
+   0) THEME / GLOBAL VARIABLES
+   - Change colors, radius, max-width here
+========================================================= */
 :root{
   --bg:#0b1220;
   --card: rgba(16, 26, 46, .72);
   --text:#eaf1ff;
   --muted:#a8b3c7;
   --line: rgba(255,255,255,.12);
+
   --accent1:#7c3aed;
   --accent2:#2563eb;
   --accent3:#22c55e;
+
   --radius:18px;
   --max:1100px;
 }
 
+
+/* =========================================================
+   1) RESET / BASE
+========================================================= */
 *{ box-sizing:border-box; }
+
 html{ scroll-behavior:smooth; }
+
 body{
   margin:0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
   color:var(--text);
+
+  /* Background gradients */
   background:
     radial-gradient(1100px 520px at 20% -10%, rgba(124,58,237,.36), transparent),
     radial-gradient(900px 520px at 85% 10%, rgba(37,99,235,.24), transparent),
     radial-gradient(900px 520px at 55% 110%, rgba(34,197,94,.12), transparent),
     var(--bg);
+
   overflow-x:hidden;
 }
 
 a{ color:inherit; text-decoration:none; }
-.container{ max-width:var(--max); margin:0 auto; padding:28px 18px 70px; }
 
-/* Top progress bar */
+.container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:28px 18px 70px;
+}
+
+
+/* =========================================================
+   2) TOP SCROLL PROGRESS BAR
+========================================================= */
 .scrollbar{
-  position:fixed; top:0; left:0;
-  height:3px; width:0%;
+  position:fixed;
+  top:0;
+  left:0;
+  height:3px;
+  width:0%;
   background: linear-gradient(90deg, var(--accent1), var(--accent2), var(--accent3));
   z-index:9999;
 }
 
-/* NAV */
+
+/* =========================================================
+   3) NAVIGATION (Desktop + Mobile)
+========================================================= */
 .nav{
-  position:sticky; top:0; z-index:100;
+  position:sticky;
+  top:0;
+  z-index:100;
+
   background: rgba(11,18,32,.72);
   backdrop-filter: blur(10px);
   border-bottom:1px solid var(--line);
 }
+
+/* Nav layout wrapper */
 .nav-inner{
   max-width:var(--max);
   margin:0 auto;
   padding:14px 18px;
+
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:14px;
 }
 
+/* Brand (logo + name) */
 .brand{
   display:flex;
   align-items:center;
   gap:10px;
+
   font-weight:900;
   letter-spacing:.2px;
+
   padding:8px 10px;
   border-radius:14px;
 }
 .brand:hover{ background: rgba(255,255,255,.06); }
 
+/* Small gradient dot */
 .brand-dot{
-  width:10px; height:10px; border-radius:999px;
+  width:10px;
+  height:10px;
+  border-radius:999px;
+
   background: linear-gradient(135deg, var(--accent1), var(--accent2));
   box-shadow: 0 0 18px rgba(124,58,237,.55);
 }
+
 .brand-name{ font-size:14px; }
 
+/* Desktop nav links */
 .nav-links{
   display:flex;
   flex-wrap:wrap;
   gap:10px;
   align-items:center;
 }
+
 .nav-links a{
   color:var(--muted);
   padding:8px 10px;
   border-radius:12px;
+
   transition: transform .2s ease, background .2s ease, color .2s ease;
 }
+
 .nav-links a:hover{
   background: rgba(255,255,255,.06);
   color:var(--text);
   transform: translateY(-1px);
 }
 
+/* Mobile menu button (hamburger) */
 .nav-btn{
   display:none;
+
   background: transparent;
   border:1px solid var(--line);
   border-radius:14px;
+
   padding:10px 10px;
   cursor:pointer;
 }
+
 .nav-btn .bar{
   display:block;
-  width:18px; height:2px;
+  width:18px;
+  height:2px;
+
   background: var(--text);
   margin:4px 0;
   border-radius:2px;
+
   transition: transform .2s ease, opacity .2s ease;
 }
+
+/* Hamburger to X animation */
 .nav-btn.active .bar:nth-child(1){ transform: translateY(6px) rotate(45deg); }
 .nav-btn.active .bar:nth-child(2){ opacity:0; }
 .nav-btn.active .bar:nth-child(3){ transform: translateY(-6px) rotate(-45deg); }
 
+/* Mobile menu container */
 .nav-mobile{
   display:none;
   max-width:var(--max);
   margin:0 auto;
   padding:0 18px 14px;
 }
+
+/* Mobile menu items */
 .nav-mobile a{
   display:block;
+
   padding:12px 12px;
   margin-top:8px;
+
   border-radius:14px;
   border:1px solid var(--line);
   background: rgba(255,255,255,.04);
+
   color: var(--muted);
 }
-.nav-mobile a:hover{ color:var(--text); background: rgba(255,255,255,.07); }
 
+.nav-mobile a:hover{
+  color:var(--text);
+  background: rgba(255,255,255,.07);
+}
+
+/* Responsive (show mobile menu at <=980px) */
 @media(max-width: 980px){
   .nav-links{ display:none; }
   .nav-btn{ display:block; }
   .nav-mobile.open{ display:block; }
 }
 
-/* CARDS + SECTIONS */
+
+/* =========================================================
+   4) CARDS + TYPOGRAPHY
+========================================================= */
 .card{
   position:relative;
+
   background: var(--card);
   border:1px solid var(--line);
   border-radius: var(--radius);
   padding:18px;
+
   box-shadow: 0 18px 55px rgba(0,0,0,.25);
 }
+
 .section{ margin-top:16px; }
 
 .section-head{
@@ -148,6 +221,7 @@ a{ color:inherit; text-decoration:none; }
   align-items:flex-end;
   justify-content:space-between;
   gap:12px;
+
   flex-wrap:wrap;
   margin-bottom:10px;
 }
@@ -156,22 +230,28 @@ h1{ margin:0 0 10px; font-size:44px; line-height:1.05; }
 h2{ margin:0 0 10px; font-size:20px; }
 h3{ margin:0; font-size:16px; }
 p{ margin:0; }
+
 .muted{ color:var(--muted); line-height:1.6; }
 
+/* Small pill label (Portfolio) */
 .kicker{
   display:inline-flex;
   gap:8px;
   align-items:center;
+
   padding:8px 12px;
   border:1px solid var(--line);
   border-radius:999px;
+
   background: rgba(255,255,255,.04);
   color: var(--muted);
   font-weight:700;
+
   width: fit-content;
   margin-bottom:12px;
 }
 
+/* Gradient text for your name */
 .accent{
   background: linear-gradient(135deg, var(--accent1), var(--accent2));
   -webkit-background-clip: text;
@@ -179,21 +259,29 @@ p{ margin:0; }
   color: transparent;
 }
 
+/* Subtitle under heading */
 .subtitle{
   margin:0 0 10px;
   color: var(--muted);
   font-weight:600;
 }
 
-/* HERO */
+
+/* =========================================================
+   5) HERO SECTION
+========================================================= */
 .hero{
   display:grid;
   grid-template-columns: 1.6fr .95fr;
   gap:16px;
   margin-top:18px;
 }
-@media(max-width: 980px){ .hero{ grid-template-columns: 1fr; } }
 
+@media(max-width: 980px){
+  .hero{ grid-template-columns: 1fr; }
+}
+
+/* Main paragraph text in hero */
 .lead{
   margin-top:6px;
   line-height:1.7;
@@ -201,6 +289,7 @@ p{ margin:0; }
   opacity: .92;
 }
 
+/* CTA buttons row */
 .cta{
   display:flex;
   flex-wrap:wrap;
@@ -208,27 +297,38 @@ p{ margin:0; }
   margin-top:14px;
 }
 
+/* Buttons */
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
+
   padding:10px 14px;
   border-radius:14px;
   border:1px solid var(--line);
   background: rgba(255,255,255,.04);
+
   font-weight:800;
   transition: transform .18s ease, background .18s ease, opacity .18s ease;
 }
-.btn:hover{ background: rgba(255,255,255,.08); transform: translateY(-1px); }
+
+.btn:hover{
+  background: rgba(255,255,255,.08);
+  transform: translateY(-1px);
+}
+
 .btn.primary{
   border:0;
   background: linear-gradient(135deg, var(--accent1), var(--accent2));
 }
 .btn.primary:hover{ opacity:.92; }
-.btn.ghost{
-  background: transparent;
-}
 
+.btn.ghost{ background: transparent; }
+
+
+/* =========================================================
+   6) SOCIAL CHIPS (GitHub / LinkedIn / Copy Email)
+========================================================= */
 .social{
   display:flex;
   flex-wrap:wrap;
@@ -240,98 +340,143 @@ p{ margin:0; }
   display:inline-flex;
   align-items:center;
   justify-content:center;
+
   padding:9px 12px;
   border-radius:999px;
   border:1px solid var(--line);
   background: rgba(255,255,255,.03);
+
   color: var(--muted);
   font-weight:800;
+
   transition: transform .18s ease, background .18s ease, color .18s ease;
 }
+
 .chip:hover{
   background: rgba(255,255,255,.07);
   color: var(--text);
   transform: translateY(-1px);
 }
+
 .chip-btn{ cursor:pointer; }
 
+
+/* =========================================================
+   7) QUICK INFO CARD (Right side in hero)
+========================================================= */
 .hero-card .kv{
   display:flex;
   justify-content:space-between;
   gap:12px;
+
   padding:10px 0;
   border-bottom:1px solid var(--line);
 }
 .hero-card .kv:last-of-type{ border-bottom:0; }
+
 .k{ color: var(--muted); font-weight:800; }
 .v{ text-align:right; }
+
 .link{ color: var(--text); font-weight:800; }
-.link:hover{ text-decoration: underline; text-underline-offset: 4px; }
+.link:hover{
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 
 .divider{
   height:1px;
   background: var(--line);
   margin:12px 0;
 }
-.mini{ color: var(--muted); font-size: 13px; line-height: 1.6; }
 
-/* Card glow */
+.mini{
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   8) CARD GLOW EFFECT
+========================================================= */
 .card-glow{
   position:absolute;
   inset:-1px;
   border-radius: var(--radius);
   pointer-events:none;
-  background: radial-gradient(500px 180px at 20% 0%, rgba(124,58,237,.35), transparent),
-              radial-gradient(380px 180px at 80% 20%, rgba(37,99,235,.25), transparent);
+
+  background:
+    radial-gradient(500px 180px at 20% 0%, rgba(124,58,237,.35), transparent),
+    radial-gradient(380px 180px at 80% 20%, rgba(37,99,235,.25), transparent);
+
   opacity: .9;
+
   mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
   -webkit-mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+
   padding: 1px;
 }
 
-/* Floating animation */
+
+/* =========================================================
+   9) FLOATING ANIMATION (Hero Quick Info Card)
+========================================================= */
 .floaty{
   animation: floaty 5.5s ease-in-out infinite;
 }
+
 @keyframes floaty{
   0%,100%{ transform: translateY(0px); }
   50%{ transform: translateY(-7px); }
 }
 
-/* Stats */
+
+/* =========================================================
+   10) STATS SECTION
+========================================================= */
 .stats{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   gap:14px;
   margin-top:14px;
 }
-@media(max-width: 980px){ .stats{ grid-template-columns: 1fr; } }
 
-.stat{
-  padding:16px;
+@media(max-width: 980px){
+  .stats{ grid-template-columns: 1fr; }
 }
+
+.stat{ padding:16px; }
+
 .stat-num{
   font-size:26px;
   font-weight:1000;
   letter-spacing:.2px;
+
   background: linear-gradient(135deg, var(--accent1), var(--accent2));
   -webkit-background-clip:text;
   background-clip:text;
   color: transparent;
 }
+
 .stat-label{
   margin-top:6px;
   color: var(--muted);
   line-height:1.5;
 }
 
-/* Skills */
+
+/* =========================================================
+   11) SKILLS SECTION
+========================================================= */
 .skill-grid{
   display:grid;
   grid-template-columns: repeat(2, 1fr);
   gap:14px;
 }
-@media(max-width: 980px){ .skill-grid{ grid-template-columns: 1fr; } }
+
+@media(max-width: 980px){
+  .skill-grid{ grid-template-columns: 1fr; }
+}
 
 .skill-block{
   border:1px solid var(--line);
@@ -346,31 +491,39 @@ p{ margin:0; }
   gap:10px;
   margin-top:10px;
 }
+
 .pill{
   padding:8px 10px;
   border-radius:999px;
   border:1px solid var(--line);
   background: rgba(255,255,255,.04);
+
   font-weight:800;
   font-size:13px;
   color: var(--text);
 }
 
-/* Timeline / Experience */
+
+/* =========================================================
+   12) EXPERIENCE / TIMELINE
+========================================================= */
 .timeline{
   display:flex;
   flex-direction:column;
   gap:14px;
   margin-top:10px;
 }
+
 .entry{
   border-top:1px solid var(--line);
   padding-top:14px;
 }
+
 .entry:first-child{
   border-top:0;
   padding-top:0;
 }
+
 .entry-top{
   display:flex;
   justify-content:space-between;
@@ -378,37 +531,55 @@ p{ margin:0; }
   flex-wrap:wrap;
   margin-bottom:8px;
 }
-ul{ margin:10px 0 0; padding-left:18px; }
-li{ margin:7px 0; line-height:1.6; color: var(--text); opacity:.95; }
 
+ul{ margin:10px 0 0; padding-left:18px; }
+
+li{
+  margin:7px 0;
+  line-height:1.6;
+  color: var(--text);
+  opacity:.95;
+}
+
+/* Tags row (Python, SQL, etc.) */
 .tags{
   display:flex;
   flex-wrap:wrap;
   gap:8px;
   margin-top:10px;
 }
+
 .tag{
   font-size:12px;
   font-weight:900;
   padding:6px 10px;
+
   border-radius:999px;
   border:1px solid var(--line);
   background: rgba(255,255,255,.06);
+
   color: var(--text);
 }
 
-/* Projects */
+
+/* =========================================================
+   13) PROJECTS
+========================================================= */
 .grid{
   display:grid;
   grid-template-columns: repeat(2, 1fr);
   gap:14px;
   margin-top:12px;
 }
-@media(max-width: 980px){ .grid{ grid-template-columns: 1fr; } }
+
+@media(max-width: 980px){
+  .grid{ grid-template-columns: 1fr; }
+}
 
 .hoverlift{
   transition: transform .2s ease, background .2s ease;
 }
+
 .hoverlift:hover{
   transform: translateY(-3px);
   background: rgba(255,255,255,.05);
@@ -421,12 +592,16 @@ li{ margin:7px 0; line-height:1.6; color: var(--text); opacity:.95; }
   margin-top:12px;
 }
 
-/* Education */
+
+/* =========================================================
+   14) EDUCATION
+========================================================= */
 .edu{
   display:flex;
   flex-direction:column;
   gap:14px;
 }
+
 .edu-item{
   border:1px solid var(--line);
   border-radius:16px;
@@ -434,31 +609,42 @@ li{ margin:7px 0; line-height:1.6; color: var(--text); opacity:.95; }
   background: rgba(255,255,255,.03);
 }
 
-/* Certifications */
+
+/* =========================================================
+   15) CERTIFICATIONS
+========================================================= */
 .list-grid{
   display:grid;
   grid-template-columns: repeat(2, 1fr);
   gap:10px;
   margin-top:10px;
 }
-@media(max-width: 980px){ .list-grid{ grid-template-columns: 1fr; } }
+
+@media(max-width: 980px){
+  .list-grid{ grid-template-columns: 1fr; }
+}
 
 .list-item{
   border:1px solid var(--line);
   border-radius:16px;
   padding:12px 14px;
+
   background: rgba(255,255,255,.03);
   color: var(--text);
   font-weight:800;
 }
 
-/* Publications */
+
+/* =========================================================
+   16) PUBLICATIONS
+========================================================= */
 .pub{
   display:flex;
   flex-direction:column;
   gap:12px;
   margin-top:10px;
 }
+
 .pub-item{
   border:1px solid var(--line);
   border-radius:16px;
@@ -466,24 +652,34 @@ li{ margin:7px 0; line-height:1.6; color: var(--text); opacity:.95; }
   background: rgba(255,255,255,.03);
 }
 
-/* Contact */
+
+/* =========================================================
+   17) CONTACT
+========================================================= */
 .contact{
   margin-top:10px;
   display:grid;
   gap:10px;
 }
+
 .contact-row{
   display:flex;
   justify-content:space-between;
   gap:12px;
+
   padding:12px 14px;
   border:1px solid var(--line);
   border-radius:16px;
+
   background: rgba(255,255,255,.03);
 }
+
 .bottom-cta{ margin-top:14px; }
 
-/* Footer */
+
+/* =========================================================
+   18) FOOTER
+========================================================= */
 .footer{
   margin-top:22px;
   text-align:center;
@@ -491,18 +687,25 @@ li{ margin:7px 0; line-height:1.6; color: var(--text); opacity:.95; }
   font-size: 13px;
 }
 
-/* Reveal animations */
+
+/* =========================================================
+   19) REVEAL ANIMATIONS
+========================================================= */
 .reveal{
   opacity: 0;
   transform: translateY(14px);
   transition: opacity .7s ease, transform .7s ease;
 }
+
 .reveal.in{
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Reduce motion (accessibility) */
+
+/* =========================================================
+   20) ACCESSIBILITY (Reduce motion)
+========================================================= */
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior: auto; }
   .floaty{ animation: none; }
