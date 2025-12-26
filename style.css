@@ -510,40 +510,68 @@ li{ margin:7px 0; line-height:1.6; color: var(--text); opacity:.95; }
   .btn, .chip, .nav-links a, .hoverlift{ transition: none; }
 }
 
-/* Icon buttons for social links */
+/* ===== Social icons: matched with design ===== */
 .social-icons{
   gap:12px;
+  align-items:center;
 }
 
-.icon-btn{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding:10px 12px;
-  border-radius:999px;
+.icon-chip{
+  appearance:none;
   border:1px solid var(--line);
   background: rgba(255,255,255,.03);
   color: var(--muted);
+  border-radius: 16px;
+  padding: 10px 12px;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
   font-weight:900;
-  transition: transform .18s ease, background .18s ease, color .18s ease;
   cursor:pointer;
+  transition: transform .18s ease, background .18s ease, color .18s ease, box-shadow .18s ease;
 }
 
-.icon-btn:hover{
+.icon-chip:hover{
   background: rgba(255,255,255,.08);
   color: var(--text);
   transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
 }
 
-.icon-btn svg{
-  width:18px;
-  height:18px;
+/* icon container */
+.icon-chip .icon{
+  width:40px;
+  height:40px;
+  border-radius: 14px;
+  display:grid;
+  place-items:center;
+  background: rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.12);
+}
+
+/* svg uses currentColor so it follows theme */
+.icon-chip svg{
+  width:20px;
+  height:20px;
   fill: currentColor;
   opacity:.95;
 }
 
-@media(max-width: 520px){
-  .icon-btn span{ display:none; } /* icons only on very small screens */
-  .icon-btn{ padding:10px; }
+/* label */
+.icon-chip .label{
+  font-size:14px;
+  letter-spacing:.2px;
 }
 
+/* “Copied!” feedback stays aligned */
+.icon-chip:focus{
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(124,58,237,.22);
+}
+
+/* mobile: keep nice without breaking */
+@media (max-width: 520px){
+  .icon-chip{ padding:10px; }
+  .icon-chip .label{ display:none; } /* icons only */
+  .icon-chip .icon{ width:42px; height:42px; }
+}
