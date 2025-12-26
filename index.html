@@ -1,489 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bhuvan Sri Sai Damarla — Portfolio</title>
-  <meta name="description" content="Bhuvan Sri Sai Damarla portfolio — Data Analyst / Data Scientist / Python Developer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhuvan Sri Sai Damarla | Portfolio</title>
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-  <!-- Top Progress Bar -->
-  <div class="scrollbar" id="scrollbar"></div>
 
-  <!-- NAV -->
-  <header class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="#home" aria-label="Go to Home">
-        <span class="brand-dot"></span>
-        <span class="brand-name">Bhuvan Sri Sai Damarla</span>
-      </a>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>
+        Hi, I'm <span class="accent">Bhuvan Sri Sai Damarla</span>
+      </h1>
 
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#home">Home</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#publications">Publications</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <p class="subtitle">
+        Master’s (Data Analytics Engineering) • Data Analyst • Data Scientist • Python Developer
+      </p>
 
-      <button class="nav-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-      </button>
+      <p class="description">
+        I’m a Data Analytics postgraduate with a Computer Science background and hands-on experience
+        as a Python Development Intern and Data Science Intern. I build automation scripts,
+        AI-driven workflows, and predictive models to improve decision-making.
+        I reduced audit handling effort by <b>35%</b> and improved workflow efficiency by
+        <b>70%</b> using Python automation and ML integration.
+      </p>
+
+      <!-- CTA BUTTONS -->
+      <div class="buttons">
+        <a href="#contact" class="btn primary">Contact</a>
+        <a href="resume.pdf" target="_blank" class="btn">Resume</a>
+        <a href="#projects" class="btn ghost">View Projects</a>
+      </div>
+
+      <!-- SOCIAL ICONS -->
+      <div class="social-icons">
+        <a href="https://github.com/Bdamarla26" target="_blank" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/bdamarla" target="_blank" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+        <button id="copyEmailBtn" aria-label="Copy Email"
+          data-copy="bdamarla.26@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+        </button>
+      </div>
     </div>
+  </section>
 
-    <!-- Mobile menu -->
-    <div class="nav-mobile" id="mobileMenu" aria-label="Mobile navigation">
-      <a href="#home">Home</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </header>
-
-  <main class="container" id="home">
-    <!-- HERO -->
-    <section class="hero reveal">
-      <div class="hero-left">
-        <p class="kicker">Portfolio</p>
-        <h1>
-          Hi, I’m <span class="accent">Bhuvan Sri Sai Damarla</span>.
-        </h1>
-        <p class="subtitle">
-          Master’s (Data Analytics Engineering) • Data Analyst • Data Scientist • Python Developer
-        </p>
-
-        <p class="lead">
-          I’m a Data Analytics postgraduate with a Computer Science background and hands-on experience as a
-          Python Development Intern and Data Science Intern. I build automation scripts, AI-driven workflows,
-          and predictive models to improve efficiency and decision-making. I reduced audit handling effort by
-          <b>35%</b> and improved workflow efficiency by <b>70%</b> through Python automation and ML integration.
-        </p>
-
-        <div class="cta">
-          <a class="btn primary" href="#contact">Contact</a>
-          <a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">Resume</a>
-          <a class="btn ghost" href="#projects">View Projects</a>
-        </div>
-
-        <div class="social">
-          <a class="chip" href="https://github.com/Bdamarla26" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="chip" href="https://www.linkedin.com/in/bdamarla" target="_blank" rel="noreferrer">LinkedIn</a>
-          <button class="chip chip-btn" id="copyEmailBtn" type="button" data-copy="bdamarla.26@gmail.com">
-            Copy Email
-          </button>
-        </div>
-      </div>
-
-      <aside class="hero-card card floaty">
-        <div class="card-glow"></div>
-        <h2>Quick Info</h2>
-
-        <div class="kv">
-          <div class="k">Email</div>
-          <div class="v"><a class="link" href="mailto:bdamarla.26@gmail.com">bdamarla.26@gmail.com</a></div>
-        </div>
-
-        <div class="kv">
-          <div class="k">Phone</div>
-          <div class="v"><a class="link" href="tel:+15712621333">+1 (571) 262-1333</a></div>
-        </div>
-
-        <div class="kv">
-          <div class="k">Location</div>
-          <div class="v">Fairfax, VA (USA)</div>
-        </div>
-
-        <div class="kv">
-          <div class="k">Looking for</div>
-          <div class="v">Internship / Part-time / Full-time</div>
-        </div>
-
-        <div class="kv">
-          <div class="k">Focus</div>
-          <div class="v">Data • ML • Automation • Dashboards</div>
-        </div>
-
-        <div class="divider"></div>
-        <p class="mini">
-          Tip: Keep your best 3–4 projects here, add metrics (accuracy, RMSE, time saved, etc.), and links.
-        </p>
-      </aside>
-    </section>
-
-    <!-- STATS -->
-    <section class="stats reveal">
-      <div class="stat card">
-        <div class="stat-num">70%</div>
-        <div class="stat-label">Workflow efficiency improvement (Python + ML)</div>
-      </div>
-      <div class="stat card">
-        <div class="stat-num">35%</div>
-        <div class="stat-label">Reduced audit handling effort (automation)</div>
-      </div>
-      <div class="stat card">
-        <div class="stat-num">3.9</div>
-        <div class="stat-label">GPA (MS Data Analytics Engineering)</div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section class="section card reveal" id="skills">
-      <div class="section-head">
-        <h2>Skills</h2>
-        <p class="muted">ATS-friendly keywords, grouped for clarity.</p>
-      </div>
-
-      <div class="skill-grid">
-        <div class="skill-block">
-          <h3>Programming</h3>
-          <div class="pill-grid">
-            <span class="pill">Python</span>
-            <span class="pill">Java</span>
-            <span class="pill">SQL</span>
-            <span class="pill">R</span>
-          </div>
-        </div>
-
-        <div class="skill-block">
-          <h3>Data & Analytics</h3>
-          <div class="pill-grid">
-            <span class="pill">Pandas</span>
-            <span class="pill">Statistical Analysis</span>
-            <span class="pill">Data Visualization</span>
-            <span class="pill">Forecasting</span>
-          </div>
-        </div>
-
-        <div class="skill-block">
-          <h3>Machine Learning / AI</h3>
-          <div class="pill-grid">
-            <span class="pill">Machine Learning</span>
-            <span class="pill">Deep Learning</span>
-            <span class="pill">NLP</span>
-            <span class="pill">Scikit-learn</span>
-            <span class="pill">TensorFlow</span>
-            <span class="pill">PyTorch</span>
-          </div>
-        </div>
-
-        <div class="skill-block">
-          <h3>Tools</h3>
-          <div class="pill-grid">
-            <span class="pill">Tableau</span>
-            <span class="pill">Power BI</span>
-            <span class="pill">Excel</span>
-            <span class="pill">Git / GitHub</span>
-          </div>
-        </div>
-
-        <div class="skill-block">
-          <h3>Cloud / Platforms</h3>
-          <div class="pill-grid">
-            <span class="pill">AWS Academy</span>
-            <span class="pill">MongoDB</span>
-            <span class="pill">Azure / GCP (basic)</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section class="section card reveal" id="experience">
-      <div class="section-head">
-        <h2>Experience</h2>
-        <p class="muted">Impact-focused bullets (ATS style).</p>
-      </div>
-
-      <div class="timeline">
-        <article class="entry">
-          <div class="entry-top">
-            <h3>Purple Technologies — Python Development Intern</h3>
-            <span class="muted">Aug 2024 – Nov 2024</span>
-          </div>
-          <ul>
-            <li>Automated data preprocessing and optimized modular Python functions; integrated ML models, improving workflow efficiency by <b>70%</b>.</li>
-            <li>Worked in Agile sprints using Git-based version control; wrote scalable, maintainable code and participated in code reviews.</li>
-            <li>Applied AI concepts (classification and NLP) to support feature development and team solutions.</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">Automation</span>
-            <span class="tag">Machine Learning</span>
-            <span class="tag">Agile</span>
-          </div>
-        </article>
-
-        <article class="entry">
-          <div class="entry-top">
-            <h3>Corizo Pvt Ltd — Data Science Intern / Data Analyst</h3>
-            <span class="muted">Dec 2023 – Jun 2024</span>
-          </div>
-          <ul>
-            <li>Applied statistical analysis and machine learning to extract actionable insights from diverse datasets.</li>
-            <li>Built solutions using Python, SQL, and data visualization to improve data processes and decision-making.</li>
-            <li>Developed predictive models for capacity planning and network forecasting.</li>
-            <li>Partnered with an automation team to reduce audit handling time and effort by <b>35%</b> while improving accuracy.</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Forecasting</span>
-            <span class="tag">Analytics</span>
-          </div>
-        </article>
-
-        <article class="entry">
-          <div class="entry-top">
-            <h3>YBI Foundation — Intern</h3>
-            <span class="muted">Feb 2022 – Jun 2022</span>
-          </div>
-          <ul>
-            <li>Built a Java-based attendance web app using Spring, MySQL, HTML, JavaScript, and REST APIs; improved speed and accuracy by <b>70%</b>.</li>
-            <li>Created technical documentation, including user manuals and system details for maintainability.</li>
-            <li>Delivered a user-friendly attendance system that improved process efficiency by <b>60%</b>.</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Java</span>
-            <span class="tag">Spring</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">REST</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="section card reveal" id="projects">
-      <div class="section-head">
-        <h2>Projects</h2>
-        <p class="muted">Strong, simple descriptions. Add links when ready.</p>
-      </div>
-
-      <div class="grid">
-        <article class="project card hoverlift">
-          <h3>Sentiment Analysis of Tweets</h3>
-          <p class="muted">
-            Built a sentiment analysis system using NLP and SVM to classify public opinion from tweets, improving accuracy and efficiency.
-          </p>
-          <div class="tags">
-            <span class="tag">NLP</span>
-            <span class="tag">SVM</span>
-            <span class="tag">Python</span>
-          </div>
-          <div class="links">
-            <a class="link" href="#" target="_blank" rel="noreferrer">Code →</a>
-            <a class="link" href="#" target="_blank" rel="noreferrer">Report →</a>
-          </div>
-        </article>
-
-        <article class="project card hoverlift">
-          <h3>Raspberry Pi Home Automation</h3>
-          <p class="muted">
-            Built a smart home automation system using Raspberry Pi OS, Python, OpenHAB, and Node-RED to improve comfort, security, and energy efficiency.
-          </p>
-          <div class="tags">
-            <span class="tag">Raspberry Pi</span>
-            <span class="tag">Node-RED</span>
-            <span class="tag">Python</span>
-          </div>
-          <div class="links">
-            <a class="link" href="#" target="_blank" rel="noreferrer">Demo →</a>
-            <a class="link" href="#" target="_blank" rel="noreferrer">Code →</a>
-          </div>
-        </article>
-
-        <article class="project card hoverlift">
-          <h3>Android-Based Smart Robot Control Car</h3>
-          <p class="muted">
-            Developed an Android-controlled robot car using Android Studio and Arduino for education, research, and surveillance use cases.
-          </p>
-          <div class="tags">
-            <span class="tag">Android Studio</span>
-            <span class="tag">Arduino</span>
-            <span class="tag">IoT</span>
-          </div>
-          <div class="links">
-            <a class="link" href="#" target="_blank" rel="noreferrer">Video →</a>
-            <a class="link" href="#" target="_blank" rel="noreferrer">Code →</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section class="section card reveal" id="education">
-      <div class="section-head">
-        <h2>Education</h2>
-        <p class="muted">Clean ATS format.</p>
-      </div>
-
-      <div class="edu">
-        <div class="edu-item">
-          <div class="entry-top">
-            <h3>George Mason University — M.S. Data Analytics Engineering</h3>
-            <span class="muted">2025 – Present • GPA: 3.9/4.0</span>
-          </div>
-          <p class="muted">Expected Graduation: May 2027 • Fairfax, VA</p>
-        </div>
-
-        <div class="edu-item">
-          <div class="entry-top">
-            <h3>VIT-AP University — B.Tech CSE (Data Analytics)</h3>
-            <span class="muted">2020 – 2024</span>
-          </div>
-          <p class="muted">Focus: Python, R, Java, SQL, MATLAB, Tableau, AWS</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CERTIFICATIONS -->
-    <section class="section card reveal" id="certifications">
-      <div class="section-head">
-        <h2>Certifications</h2>
-        <p class="muted">Add more if needed. Keep it ATS-friendly.</p>
-      </div>
-
-      <div class="list-grid">
-        <div class="list-item">AWS Academy: Cloud Foundations</div>
-        <div class="list-item">AWS Academy: Data Engineering</div>
-        <div class="list-item">IBM: Data Analysis with Python</div>
-        <div class="list-item">IBM: Python for Data Science, AI & Development</div>
-        <div class="list-item">IBM: Data Science Methodology</div>
-      </div>
-    </section>
-
-    <!-- PUBLICATIONS -->
-    <section class="section card reveal" id="publications">
-      <div class="section-head">
-        <h2>Publications</h2>
-        <p class="muted">If you add PDF links later, replace the “#” links.</p>
-      </div>
-
-      <div class="pub">
-        <div class="pub-item">
-          <h3>Enhanced Security Deployment for Wearable Heart-Rate Device Using Deep Learning</h3>
-          <p class="muted">IEEE</p>
-          <a class="link" href="#" target="_blank" rel="noreferrer">Link →</a>
-        </div>
-
-        <div class="pub-item">
-          <h3>Early Detection of Skin Cancer Using Attention Mechanism and Transformers</h3>
-          <p class="muted">IEEE</p>
-          <a class="link" href="#" target="_blank" rel="noreferrer">Link →</a>
-        </div>
-
-        <div class="pub-item">
-          <h3>Optimizing Minimum Spanning Tree Computation: ANN Approach</h3>
-          <p class="muted">IJARESM • Oct 2023</p>
-          <a class="link" href="#" target="_blank" rel="noreferrer">Link →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section card reveal" id="contact">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <p class="muted">One click and recruiters can reach you.</p>
-      </div>
-
-      <div class="contact">
-        <div class="contact-row">
-          <div class="k">Email</div>
-          <div class="v"><a class="link" href="mailto:bdamarla.26@gmail.com">bdamarla.26@gmail.com</a></div>
-        </div>
-        <div class="contact-row">
-          <div class="k">Phone</div>
-          <div class="v"><a class="link" href="tel:+15712621333">+1 (571) 262-1333</a></div>
-        </div>
-        <div class="contact-row">
-          <div class="k">LinkedIn</div>
-          <div class="v"><a class="link" href="https://www.linkedin.com/in/bdamarla" target="_blank" rel="noreferrer">Open</a></div>
-        </div>
-        <div class="contact-row">
-          <div class="k">GitHub</div>
-          <div class="v"><a class="link" href="https://github.com/Bdamarla26" target="_blank" rel="noreferrer">Open</a></div>
-        </div>
-      </div>
-
-      <div class="cta bottom-cta">
-        <a class="btn primary" href="mailto:bdamarla.26@gmail.com">Email Me</a>
-        <a class="btn" href="https://www.linkedin.com/in/bdamarla" target="_blank" rel="noreferrer">Message on LinkedIn</a>
-      </div>
-    </section>
-
-    <footer class="footer reveal">
-      © <span id="year"></span> Bhuvan Sri Sai Damarla • Built with HTML/CSS
-    </footer>
-  </main>
-
+  <!-- SIMPLE SCRIPT -->
   <script>
-    // year
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // mobile menu toggle
-    const btn = document.getElementById("menuBtn");
-    const menu = document.getElementById("mobileMenu");
-
-    btn.addEventListener("click", () => {
-      const isOpen = menu.classList.toggle("open");
-      btn.setAttribute("aria-expanded", String(isOpen));
-      btn.classList.toggle("active", isOpen);
-    });
-
-    menu.querySelectorAll("a").forEach(a => {
-      a.addEventListener("click", () => {
-        menu.classList.remove("open");
-        btn.classList.remove("active");
-        btn.setAttribute("aria-expanded", "false");
-      });
-    });
-
-    // copy email
     const copyBtn = document.getElementById("copyEmailBtn");
+
     copyBtn.addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText(copyBtn.dataset.copy);
-        const old = copyBtn.textContent;
-        copyBtn.textContent = "Copied!";
-        setTimeout(() => (copyBtn.textContent = old), 900);
-      } catch (e) {
-        // fallback
-        window.location.href = "mailto:" + copyBtn.dataset.copy;
-      }
+      const email = copyBtn.dataset.copy;
+      await navigator.clipboard.writeText(email);
+
+      copyBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
+      setTimeout(() => {
+        copyBtn.innerHTML = '<i class="fa-solid fa-envelope"></i>';
+      }, 1200);
     });
-
-    // scroll progress bar
-    const bar = document.getElementById("scrollbar");
-    const onScroll = () => {
-      const h = document.documentElement;
-      const scrolled = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
-      bar.style.width = scrolled + "%";
-    };
-    document.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-
-    // scroll reveal animation (IntersectionObserver)
-    const revealEls = document.querySelectorAll(".reveal");
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in");
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    revealEls.forEach(el => io.observe(el));
   </script>
+
 </body>
 </html>
