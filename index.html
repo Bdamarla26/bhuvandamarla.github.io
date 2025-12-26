@@ -1,44 +1,25 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- ======================================================
-       1) META / SEO
-  ======================================================= -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bhuvan Sri Sai Damarla — Portfolio</title>
+  <title>BHUVAN SRI SAI DAMARLA — Portfolio</title>
   <meta name="description" content="Bhuvan Sri Sai Damarla portfolio — Data Analyst / Data Scientist / Python Developer" />
-
-  <!-- ======================================================
-       2) STYLESHEET
-  ======================================================= -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
-  <!-- ======================================================
-       3) TOP SCROLL PROGRESS BAR (fixed at top)
-  ======================================================= -->
+  <!-- Top Progress Bar -->
   <div class="scrollbar" id="scrollbar"></div>
-  <!-- =================== END PROGRESS BAR =================== -->
 
-
-  <!-- ======================================================
-       4) NAVIGATION BAR (Desktop + Mobile)
-  ======================================================= -->
+  <!-- NAV -->
   <header class="nav">
-
-    <!-- -------- NAV INNER ROW -------- -->
     <div class="nav-inner">
-
-      <!-- Brand / Logo -->
       <a class="brand" href="#home" aria-label="Go to Home">
         <span class="brand-dot"></span>
         <span class="brand-name">Bhuvan Sri Sai Damarla</span>
       </a>
 
-      <!-- Desktop Links -->
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#home">Home</a>
         <a href="#skills">Skills</a>
@@ -50,16 +31,12 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <!-- Mobile Hamburger Button -->
       <button class="nav-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
-
     </div>
-    <!-- -------- END NAV INNER ROW -------- -->
 
-
-    <!-- -------- MOBILE MENU LINKS -------- -->
+    <!-- Mobile menu -->
     <div class="nav-mobile" id="mobileMenu" aria-label="Mobile navigation">
       <a href="#home">Home</a>
       <a href="#skills">Skills</a>
@@ -70,40 +47,20 @@
       <a href="#publications">Publications</a>
       <a href="#contact">Contact</a>
     </div>
-    <!-- -------- END MOBILE MENU LINKS -------- -->
-
   </header>
-  <!-- =================== END NAVIGATION =================== -->
 
-
-  <!-- ======================================================
-       5) MAIN CONTENT WRAPPER
-  ======================================================= -->
   <main class="container" id="home">
-
-
-    <!-- ======================================================
-         6) HERO SECTION (Left Content + Quick Info Card)
-    ======================================================= -->
+    <!-- HERO -->
     <section class="hero reveal">
-
-      <!-- -------- HERO LEFT -------- -->
       <div class="hero-left">
-
-        <!-- Small label -->
         <p class="kicker">Portfolio</p>
-
-        <!-- Main heading -->
         <h1>
           Hi, I’m <span class="accent">Bhuvan Sri Sai Damarla</span>.
         </h1>
-
-        <!-- Subtitle -->
         <p class="subtitle">
           Master’s (Data Analytics Engineering) • Data Analyst • Data Scientist • Python Developer
         </p>
 
-        <!-- Intro paragraph -->
         <p class="lead">
           I’m a Data Analytics postgraduate with a Computer Science background and hands-on experience as a
           Python Development Intern and Data Science Intern. I build automation scripts, AI-driven workflows,
@@ -111,33 +68,23 @@
           <b>35%</b> and improved workflow efficiency by <b>70%</b> through Python automation and ML integration.
         </p>
 
-        <!-- Call-to-action buttons -->
         <div class="cta">
           <a class="btn primary" href="#contact">Contact</a>
           <a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">Resume</a>
           <a class="btn ghost" href="#projects">View Projects</a>
         </div>
 
-        <!-- Social links (chips) -->
         <div class="social">
           <a class="chip" href="https://github.com/Bdamarla26" target="_blank" rel="noreferrer">GitHub</a>
           <a class="chip" href="https://www.linkedin.com/in/bdamarla" target="_blank" rel="noreferrer">LinkedIn</a>
-
-          <!-- Copy Email button -->
           <button class="chip chip-btn" id="copyEmailBtn" type="button" data-copy="bdamarla.26@gmail.com">
             Copy Email
           </button>
         </div>
-
       </div>
-      <!-- -------- END HERO LEFT -------- -->
 
-
-      <!-- -------- HERO RIGHT (Quick Info Card) -------- -->
       <aside class="hero-card card floaty">
-
         <div class="card-glow"></div>
-
         <h2>Quick Info</h2>
 
         <div class="kv">
@@ -166,54 +113,36 @@
         </div>
 
         <div class="divider"></div>
-
         <p class="mini">
           Tip: Keep your best 3–4 projects here, add metrics (accuracy, RMSE, time saved, etc.), and links.
         </p>
-
       </aside>
-      <!-- -------- END HERO RIGHT -------- -->
-
     </section>
-    <!-- =================== END HERO =================== -->
 
-
-    <!-- ======================================================
-         7) STATS SECTION
-    ======================================================= -->
+    <!-- STATS -->
     <section class="stats reveal">
-
       <div class="stat card">
         <div class="stat-num">70%</div>
         <div class="stat-label">Workflow efficiency improvement (Python + ML)</div>
       </div>
-
       <div class="stat card">
         <div class="stat-num">35%</div>
         <div class="stat-label">Reduced audit handling effort (automation)</div>
       </div>
-
       <div class="stat card">
         <div class="stat-num">3.9</div>
         <div class="stat-label">GPA (MS Data Analytics Engineering)</div>
       </div>
-
     </section>
-    <!-- =================== END STATS =================== -->
 
-
-    <!-- ======================================================
-         8) SKILLS SECTION
-    ======================================================= -->
+    <!-- SKILLS -->
     <section class="section card reveal" id="skills">
-
       <div class="section-head">
         <h2>Skills</h2>
         <p class="muted">ATS-friendly keywords, grouped for clarity.</p>
       </div>
 
       <div class="skill-grid">
-
         <div class="skill-block">
           <h3>Programming</h3>
           <div class="pill-grid">
@@ -264,37 +193,27 @@
             <span class="pill">Azure / GCP (basic)</span>
           </div>
         </div>
-
       </div>
     </section>
-    <!-- =================== END SKILLS =================== -->
 
-
-    <!-- ======================================================
-         9) EXPERIENCE SECTION
-    ======================================================= -->
+    <!-- EXPERIENCE -->
     <section class="section card reveal" id="experience">
-
       <div class="section-head">
         <h2>Experience</h2>
         <p class="muted">Impact-focused bullets (ATS style).</p>
       </div>
 
       <div class="timeline">
-
-        <!-- Experience 1 -->
         <article class="entry">
           <div class="entry-top">
             <h3>Purple Technologies — Python Development Intern</h3>
             <span class="muted">Aug 2024 – Nov 2024</span>
           </div>
-
           <ul>
             <li>Automated data preprocessing and optimized modular Python functions; integrated ML models, improving workflow efficiency by <b>70%</b>.</li>
             <li>Worked in Agile sprints using Git-based version control; wrote scalable, maintainable code and participated in code reviews.</li>
             <li>Applied AI concepts (classification and NLP) to support feature development and team solutions.</li>
           </ul>
-
           <div class="tags">
             <span class="tag">Python</span>
             <span class="tag">Automation</span>
@@ -303,20 +222,17 @@
           </div>
         </article>
 
-        <!-- Experience 2 -->
         <article class="entry">
           <div class="entry-top">
             <h3>Corizo Pvt Ltd — Data Science Intern / Data Analyst</h3>
             <span class="muted">Dec 2023 – Jun 2024</span>
           </div>
-
           <ul>
             <li>Applied statistical analysis and machine learning to extract actionable insights from diverse datasets.</li>
             <li>Built solutions using Python, SQL, and data visualization to improve data processes and decision-making.</li>
             <li>Developed predictive models for capacity planning and network forecasting.</li>
             <li>Partnered with an automation team to reduce audit handling time and effort by <b>35%</b> while improving accuracy.</li>
           </ul>
-
           <div class="tags">
             <span class="tag">Python</span>
             <span class="tag">SQL</span>
@@ -325,19 +241,16 @@
           </div>
         </article>
 
-        <!-- Experience 3 -->
         <article class="entry">
           <div class="entry-top">
             <h3>YBI Foundation — Intern</h3>
             <span class="muted">Feb 2022 – Jun 2022</span>
           </div>
-
           <ul>
             <li>Built a Java-based attendance web app using Spring, MySQL, HTML, JavaScript, and REST APIs; improved speed and accuracy by <b>70%</b>.</li>
             <li>Created technical documentation, including user manuals and system details for maintainability.</li>
             <li>Delivered a user-friendly attendance system that improved process efficiency by <b>60%</b>.</li>
           </ul>
-
           <div class="tags">
             <span class="tag">Java</span>
             <span class="tag">Spring</span>
@@ -345,25 +258,17 @@
             <span class="tag">REST</span>
           </div>
         </article>
-
       </div>
     </section>
-    <!-- =================== END EXPERIENCE =================== -->
 
-
-    <!-- ======================================================
-         10) PROJECTS SECTION
-    ======================================================= -->
+    <!-- PROJECTS -->
     <section class="section card reveal" id="projects">
-
       <div class="section-head">
         <h2>Projects</h2>
         <p class="muted">Strong, simple descriptions. Add links when ready.</p>
       </div>
 
       <div class="grid">
-
-        <!-- Project 1 -->
         <article class="project card hoverlift">
           <h3>Sentiment Analysis of Tweets</h3>
           <p class="muted">
@@ -380,7 +285,6 @@
           </div>
         </article>
 
-        <!-- Project 2 -->
         <article class="project card hoverlift">
           <h3>Raspberry Pi Home Automation</h3>
           <p class="muted">
@@ -397,7 +301,6 @@
           </div>
         </article>
 
-        <!-- Project 3 -->
         <article class="project card hoverlift">
           <h3>Android-Based Smart Robot Control Car</h3>
           <p class="muted">
@@ -413,17 +316,11 @@
             <a class="link" href="#" target="_blank" rel="noreferrer">Code →</a>
           </div>
         </article>
-
       </div>
     </section>
-    <!-- =================== END PROJECTS =================== -->
 
-
-    <!-- ======================================================
-         11) EDUCATION SECTION
-    ======================================================= -->
+    <!-- EDUCATION -->
     <section class="section card reveal" id="education">
-
       <div class="section-head">
         <h2>Education</h2>
         <p class="muted">Clean ATS format.</p>
@@ -446,16 +343,10 @@
           <p class="muted">Focus: Python, R, Java, SQL, MATLAB, Tableau, AWS</p>
         </div>
       </div>
-
     </section>
-    <!-- =================== END EDUCATION =================== -->
 
-
-    <!-- ======================================================
-         12) CERTIFICATIONS SECTION
-    ======================================================= -->
+    <!-- CERTIFICATIONS -->
     <section class="section card reveal" id="certifications">
-
       <div class="section-head">
         <h2>Certifications</h2>
         <p class="muted">Add more if needed. Keep it ATS-friendly.</p>
@@ -468,16 +359,10 @@
         <div class="list-item">IBM: Python for Data Science, AI & Development</div>
         <div class="list-item">IBM: Data Science Methodology</div>
       </div>
-
     </section>
-    <!-- =================== END CERTIFICATIONS =================== -->
 
-
-    <!-- ======================================================
-         13) PUBLICATIONS SECTION
-    ======================================================= -->
+    <!-- PUBLICATIONS -->
     <section class="section card reveal" id="publications">
-
       <div class="section-head">
         <h2>Publications</h2>
         <p class="muted">If you add PDF links later, replace the “#” links.</p>
@@ -502,16 +387,10 @@
           <a class="link" href="#" target="_blank" rel="noreferrer">Link →</a>
         </div>
       </div>
-
     </section>
-    <!-- =================== END PUBLICATIONS =================== -->
 
-
-    <!-- ======================================================
-         14) CONTACT SECTION
-    ======================================================= -->
+    <!-- CONTACT -->
     <section class="section card reveal" id="contact">
-
       <div class="section-head">
         <h2>Contact</h2>
         <p class="muted">One click and recruiters can reach you.</p>
@@ -522,17 +401,14 @@
           <div class="k">Email</div>
           <div class="v"><a class="link" href="mailto:bdamarla.26@gmail.com">bdamarla.26@gmail.com</a></div>
         </div>
-
         <div class="contact-row">
           <div class="k">Phone</div>
           <div class="v"><a class="link" href="tel:+15712621333">+1 (571) 262-1333</a></div>
         </div>
-
         <div class="contact-row">
           <div class="k">LinkedIn</div>
           <div class="v"><a class="link" href="https://www.linkedin.com/in/bdamarla" target="_blank" rel="noreferrer">Open</a></div>
         </div>
-
         <div class="contact-row">
           <div class="k">GitHub</div>
           <div class="v"><a class="link" href="https://github.com/Bdamarla26" target="_blank" rel="noreferrer">Open</a></div>
@@ -543,36 +419,18 @@
         <a class="btn primary" href="mailto:bdamarla.26@gmail.com">Email Me</a>
         <a class="btn" href="https://www.linkedin.com/in/bdamarla" target="_blank" rel="noreferrer">Message on LinkedIn</a>
       </div>
-
     </section>
-    <!-- =================== END CONTACT =================== -->
 
-
-    <!-- ======================================================
-         15) FOOTER
-    ======================================================= -->
     <footer class="footer reveal">
       © <span id="year"></span> Bhuvan Sri Sai Damarla • Built with HTML/CSS
     </footer>
-    <!-- =================== END FOOTER =================== -->
-
   </main>
-  <!-- =================== END MAIN =================== -->
 
-
-  <!-- ======================================================
-       16) JAVASCRIPT (Year, Mobile Nav, Copy Email, Scrollbar, Reveal)
-  ======================================================= -->
   <script>
-    // ------------------------------------------------------
-    // A) Set Current Year in Footer
-    // ------------------------------------------------------
+    // year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-
-    // ------------------------------------------------------
-    // B) Mobile Menu Toggle
-    // ------------------------------------------------------
+    // mobile menu toggle
     const btn = document.getElementById("menuBtn");
     const menu = document.getElementById("mobileMenu");
 
@@ -590,10 +448,7 @@
       });
     });
 
-
-    // ------------------------------------------------------
-    // C) Copy Email Button
-    // ------------------------------------------------------
+    // copy email
     const copyBtn = document.getElementById("copyEmailBtn");
     copyBtn.addEventListener("click", async () => {
       try {
@@ -602,15 +457,12 @@
         copyBtn.textContent = "Copied!";
         setTimeout(() => (copyBtn.textContent = old), 900);
       } catch (e) {
-        // fallback if clipboard not supported
+        // fallback
         window.location.href = "mailto:" + copyBtn.dataset.copy;
       }
     });
 
-
-    // ------------------------------------------------------
-    // D) Scroll Progress Bar (Top)
-    // ------------------------------------------------------
+    // scroll progress bar
     const bar = document.getElementById("scrollbar");
     const onScroll = () => {
       const h = document.documentElement;
@@ -620,10 +472,7 @@
     document.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
 
-
-    // ------------------------------------------------------
-    // E) Scroll Reveal Animation (IntersectionObserver)
-    // ------------------------------------------------------
+    // scroll reveal animation (IntersectionObserver)
     const revealEls = document.querySelectorAll(".reveal");
     const io = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -636,7 +485,5 @@
 
     revealEls.forEach(el => io.observe(el));
   </script>
-  <!-- =================== END JAVASCRIPT =================== -->
-
 </body>
 </html>
